@@ -15,4 +15,8 @@ public class WarehouseService {
     public List<WarehouseEntity> getAll() {
         return warehouseRepository.findAll();
     }
+
+    public List<WarehouseEntity> getAllByIdIn(List<Long> idList) {
+        return warehouseRepository.findAllByIdIn(idList);
+    }
 }

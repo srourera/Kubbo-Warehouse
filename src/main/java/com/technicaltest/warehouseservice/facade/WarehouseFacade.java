@@ -22,4 +22,9 @@ public class WarehouseFacade {
         List<WarehouseEntity> warehouses = warehouseService.getAll();
         return warehouseMapper.warehouseEntityListToWarehouseDataList(warehouses);
     }
+
+    public List<WarehouseData> getAllByList(List<Long> idList) {
+        List<WarehouseEntity> warehouses = warehouseService.getAllByIdIn(idList);
+        return warehouseMapper.warehouseEntityListToWarehouseDataList(warehouses);
+    }
 }

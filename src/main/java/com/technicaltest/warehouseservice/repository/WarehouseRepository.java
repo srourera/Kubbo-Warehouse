@@ -5,8 +5,10 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface WarehouseRepository extends CrudRepository<WarehouseEntity, Integer> {
+public interface WarehouseRepository extends CrudRepository<WarehouseEntity, Long> {
 
     List<WarehouseEntity> findAll();
+
+    List<WarehouseEntity> findAllByIdIn(List<Long> idList);
 
 }
